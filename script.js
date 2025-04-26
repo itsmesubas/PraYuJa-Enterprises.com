@@ -39,11 +39,30 @@ const closeBtn = document.querySelector('.close-btn');
 const stars = document.querySelectorAll('.rating-input i');
 const ratingValue = document.getElementById('ratingValue');
 
+// Smooth scroll to rating section when clicking rate button
 rateBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        ratingModal.style.display = 'block';
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Scroll to testimonials section smoothly
+        document.querySelector('.testimonials').scrollIntoView({
+            behavior: 'smooth'
+        });
+        // Small delay to ensure scroll completes before showing modal
+        setTimeout(() => {
+            ratingModal.style.display = 'block';
+        }, 800);
     });
 });
+
+closeBtn.addEventListener('click', () => {
+    ratingModal.style.display = 'none';
+});
+
+//rateBtns.forEach(btn => {
+   // btn.addEventListener('click', () => {
+    //    ratingModal.style.display = 'block';
+  //  });
+//});
 
 closeBtn.addEventListener('click', () => {
     ratingModal.style.display = 'none';
@@ -175,3 +194,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+    //Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mainNav = document.querySelector('.main-nav');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+        this.querySelector('i').classList.toggle('fa-times');
+        this.querySelector('i').classList.toggle('fa-bars');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            mainNav.classList.remove('active');
+            mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+        });
+    });
