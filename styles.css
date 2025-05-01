@@ -10,6 +10,7 @@
       flex-direction: column;
       display: flex;
     }
+    
   }
 
 * {
@@ -29,7 +30,7 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -266,14 +267,19 @@ align-items: center;
     .consumption-instructions ul li {
         font-size: 1rem;
     }
-    .consumption-image{
-        width: 100%;
-        height: auto;
+    .consumption-instructions h3{
+        text-align: justify;
+        font-size: 2rem;
     }
+ 
     .consumption-image img{
         width: 100%;
         height: auto;
-    }
+    
+}
+.consumption-image{
+    
+}
 }
 /* About Product Section */
 .about-product {
@@ -1061,5 +1067,11 @@ footer {
         align-items: left;
     
     }
-    
+    .about-text {
+        text-align: justify;
+        word-break: break-word;
+        hyphens: auto;
+        margin: auto;
+        word-spacing: normal;
+    }
 }
