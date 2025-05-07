@@ -120,7 +120,7 @@ nav ul li a:hover {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--secondary-color);
+    background-color:rgb(5, 0, 2);
     transition: var(--transition);
 }
 
@@ -134,14 +134,15 @@ nav ul li a:hover {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
-    color: white;
+    color: rgb(0, 0, 0);
     position: fixed;
     top: 15px;
     right: 15px;
     z-index: 1100;
-    background-color: var(--primary-color);
     padding: 10px;
     border-radius: 5px;
+
+   
 }
 
 .hero {
@@ -187,7 +188,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover{
     background-color: #ca5100;
     transform: translateY(2px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.488);
@@ -275,9 +276,6 @@ align-items: center;
     .consumption-image img{
         width: 100%;
         height: auto;
-    
-}
-.consumption-image{
     
 }
 }
@@ -1031,6 +1029,7 @@ footer {
         z-index: 1000;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         border-radius: 15px 15px;
+       
     }
     .main-nav.active {
         right: 0;
@@ -1074,4 +1073,4 @@ footer {
         margin: auto;
         word-spacing: normal;
     }
-}
+}  
